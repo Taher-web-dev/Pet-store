@@ -1,7 +1,9 @@
+import Header from './components/Header/header';
+
 function App() {
   return (
     <div className="App">
-      <h1>Welcome pet project</h1>
+      <Header />
     </div>
   );
 }
