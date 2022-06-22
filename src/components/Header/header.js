@@ -1,16 +1,32 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Typography } from '@mui/material';
+import { setSearch, setBrowse } from '../../Redux/SearchStatus/searchReducer';
+import { setCurrentList } from '../../Redux/CurrentListPet/currentListReducers';
+import cleanItems from '../petList/listContainerHelper';
 import AV from '../../assets/images/available.png';
 import PD from '../../assets/images/pending.png';
 import SD from '../../assets/images/sold.png';
 import './header.css';
 
 const Header = () => {
+  const dispatch = useDispatch();
   const status = ['available', 'pending', 'sold'];
   const statusIcons = [AV, PD, SD];
+  const currentList = useSelector((state) => state.currentList);
+  const search = (e) => {
+    const text = e.target.value;
+    if (text === '') {
+      dispatch(setBrowse());
+      return;
+    }
+    dispatch(setSearch());
+    const newList = currentList.filter((item) => item.name.includes(text));
+    dispatch(setCurrentList(cleanItems(newList)));
+  };
   return (
     <div className="header-wrapper">
-      <input type="search" placeholder="Search Pet, Cat, etc." className="search-bar" />
+      <input type="search" placeholder="Search Pet, Cat, etc." className="search-bar" onChange={search} />
       <Typography
         variant="h2"
         style={{
