@@ -52,7 +52,6 @@ const Pet = () => {
         body: JSON.stringify({ name }),
       });
       const code = request.status;
-      console.log(code);
       if (code !== 200) {
         updateMessage('Something went wrong');
         return;

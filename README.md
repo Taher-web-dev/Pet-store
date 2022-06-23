@@ -1,70 +1,69 @@
+# TODOLIST
+> In this Project, I created a Pet Store front-end on MVC architecture with CRUD principles , in order to allow users add, update, delete pets and get a list of availables, pending and sold pets. Users can also use search engine to fetch pets by key words and leverage from many others features whih can made his experience very rich while navigating the website.
+## Project Preview
+
+App-Preview                         
+:---------------------------------------------------------------------------------:
+![](./src/assets/images/preview.png)  
+
+Desktop-Home                             
+:---------------------------------------------------------------------------------:
+![](./src/assets/images/welcome.png)
+
+Desktop-Add-Item                             
+:---------------------------------------------------------------------------------:
+![](./src/assets/images/new.png)
+
+
+## Front-end Live Demo
+> Click [here](https://todo-handson.netlify.app/) to see the live preview of the project.
+
+> [link to Backend](https://petstore.swagger.io/)
+
+### Built With
+
+- [React](https://es.reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [JS](https://www.javascript.com/)
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
+- [REACT-BOOTSTRAP](https://react-bootstrap.github.io/)
+- [@MUI/MATERIAL](https://mui.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Installation
 
-In the project directory, you can run:
+1. Clone the repository
+   ```sh
+   git clone https://github.com/Taher-web-dev/ToDo-HandsOn-Front-end
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run server
+   ```sh
+   npm start
+   ```
+   
+## Authors
 
-### `npm start`
+👤 **Taher Haggui**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- GitHub: [@Taher-web-dev](https://github.com/Taher-web-dev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/taher-haggui/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 🤝 Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributions, issues, and feature requests are welcome!
 
-### `npm run build`
+Feel free to check the [issues page](../../issues/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Show your support
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!

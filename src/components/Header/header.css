@@ -1,69 +1,69 @@
 body {
-	margin: 0;
+  margin: 0;
 }
 
 .header-wrapper {
-	background: url('../../assets/images/welcome_image.jpg');
-	background-size: cover;
-	height: 380px;
-	border-bottom: 8px solid rgb(107, 88, 181);
+  background: url('../../assets/images/welcome_image.jpg');
+  background-size: cover;
+  height: 380px;
+  border-bottom: 8px solid rgb(107, 88, 181);
 }
 
 .search-bar {
-	width: 65%;
-	margin-left: 17.5%;
-	margin-top: 25px;
-	height: 60px;
-	padding: 20px 0;
-	border: 1px solid white;
-	border-radius: 4px;
-	margin-bottom: 70px;
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 25px;
+  height: 60px;
+  padding: 20px 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  margin-bottom: 70px;
 }
 
 .search-bar:focus {
-	outline: rgb(107, 88, 181);
-	border-color: rgb(107, 88, 181);
+  outline: rgb(107, 88, 181);
+  border-color: rgb(107, 88, 181);
 }
 
 .search-bar::placeholder {
-	font-family: Nexa-Bold, arial, helvetica, sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	color: #4d4751;
-	padding-left: 2.5%;
-	background: url('../../assets/images/chercher.png') no-repeat;
-	background-position: 95%;
+  font-family: Nexa-Bold, arial, helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4d4751;
+  padding-left: 2.5%;
+  background: url('../../assets/images/chercher.png') no-repeat;
+  background-position: 95%;
 }
 
 .all-status-wrapper {
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .status-wrapper {
-	background-color: white;
-	width: 200px;
-	height: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-right: 20px;
-	border: 1px solid rgb(224, 224, 224);
-	border-radius: 16px;
-	cursor: pointer;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 16px;
+  cursor: pointer;
 }
 
 .status-icon {
-	width: 50%;
+  width: 50%;
 }
 
 .status-title {
-	text-transform: capitalize;
-	font-family: 'Nexa-Regular', arial, helvetica, sans-serif;
-	color: #4d4751;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 26px;
+  text-transform: capitalize;
+  font-family: 'Nexa-Regular', arial, helvetica, sans-serif;
+  color: #4d4751;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
