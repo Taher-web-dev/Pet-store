@@ -8,7 +8,7 @@ export const setStatusToAvailable = ({
 export const setStatusToPending = ({
   type: PENDING,
 });
-export const setStatusToSols = ({
+export const setStatusToSold = ({
   type: SOLD,
 });
 const statusReducers = (state = 'available', action) => {

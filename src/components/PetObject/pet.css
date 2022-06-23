@@ -1,0 +1,86 @@
+.login-wrapper {
+  background: linear-gradient(rgb(248, 249, 250), rgb(233, 236, 239));
+}
+
+.login-window {
+  width: 30%;
+  margin-left: 35%;
+  background-color: white;
+}
+
+.logo {
+  width: 20%;
+  margin: 6% 0 5% 40%;
+}
+
+.input-title {
+  margin-left: 5%;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 1.25%;
+}
+
+#username {
+  width: 90%;
+  margin-left: 5%;
+  outline: unset;
+  border: 1px solid rgb(206, 212, 218);
+  padding: 1.25% 0;
+  border-radius: 4px;
+  margin-bottom: 3.75%;
+  height: 36px;
+}
+
+#username::placeholder {
+  color: rgb(206, 212, 218);
+  padding-left: 5%;
+}
+
+.urls-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.input-url {
+  width: 100%;
+  outline: unset;
+  border: 1px solid rgb(206, 212, 218);
+  padding: 1.25% 0;
+  border-radius: 4px;
+  margin-bottom: 3.75%;
+  height: 36px;
+}
+
+.input-url::placeholder {
+  color: rgb(206, 212, 218);
+  padding-left: 5.6%;
+}
+
+#username:focus {
+  border-color: rgb(58, 242, 249);
+}
+
+.input-url:focus {
+  border-color: rgb(58, 242, 249);
+}
+
+.submit-btn {
+  background-color: rgb(117, 191, 195);
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid rgb(117, 191, 195);
+  padding: 1.25% 0;
+  border-radius: 4px;
+  margin-top: 10%;
+  position: absolute;
+  bottom: 5%;
+}
+
+.submit-btn:hover {
+  background-color: rgb(15, 90, 94);
+}

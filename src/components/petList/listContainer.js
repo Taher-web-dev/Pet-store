@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import AddIcon from '@mui/icons-material/Add';
@@ -10,20 +11,29 @@ import cleanItems from './listContainerHelper';
 
 const ListContainer = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const search = useSelector((state) => state.search);
   const currentList = useSelector((state) => state.currentList);
   const petStatus = useSelector((state) => state.petStatus);
-  const availablesPets = useSelector((state) => state.availables);
+  const currentPets = useSelector((state) => state.pets);
+  const currentMessage = useSelector((state) => state.message);
+  const createPet = () => {
+    navigate('/new', { state: { op: 'create' } });
+  };
   const updateCurrentList = () => {
     if ((petStatus === 'available') && (!search)) {
-      dispatch(setCurrentList(cleanItems(availablesPets.av)));
+      dispatch(setCurrentList(cleanItems(currentPets.av)));
+    } else if ((petStatus === 'pending') && (!search)) {
+      dispatch(setCurrentList(cleanItems(currentPets.pd)));
+    } else if ((petStatus === 'sold') && (!search)) {
+      dispatch(setCurrentList(cleanItems(currentPets.sd)));
     }
   };
-  useEffect(() => updateCurrentList(), [availablesPets, search]);
+  useEffect(() => updateCurrentList(), [currentPets, search, petStatus]);
   return (
     <div className="list-container" style={{ backgroundColor: 'rgb(239, 238, 241)', paddingTop: '150px' }}>
-      <Alert variant="info" style={{ width: '60%', marginLeft: '20%', display: 'none' }}>
-        test text
+      <Alert variant="info" style={{ width: '60%', marginLeft: '20%', display: currentMessage === '' ? 'none' : 'block' }}>
+        {currentMessage}
       </Alert>
       <Typography
         variant="h6"
@@ -36,6 +46,7 @@ const ListContainer = () => {
       </Typography>
       <button
         type="submit"
+        onClick={createPet}
         style={{
           background: 'linear-gradient(rgb(52, 37, 83), rgb(123, 91, 186))', border: '1px solid rgb(239, 238, 241)', color: 'white', width: '50%', margin: '25px 0 25px 25%', padding: '1.25% 0', borderRadius: '4px', fontWeight: 700,
         }}

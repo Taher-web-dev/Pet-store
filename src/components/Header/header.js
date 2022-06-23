@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Typography } from '@mui/material';
 import { setSearch, setBrowse } from '../../Redux/SearchStatus/searchReducer';
 import { setCurrentList } from '../../Redux/CurrentListPet/currentListReducers';
+import { setStatusToAvailable, setStatusToPending, setStatusToSold } from '../../Redux/Status/statusReducers';
 import cleanItems from '../petList/listContainerHelper';
 import AV from '../../assets/images/available.png';
 import PD from '../../assets/images/pending.png';
@@ -14,6 +15,26 @@ const Header = () => {
   const status = ['available', 'pending', 'sold'];
   const statusIcons = [AV, PD, SD];
   const currentList = useSelector((state) => state.currentList);
+  const changeStatus = (e) => {
+    let targetELement = e.target;
+    targetELement = targetELement.className === 'status-wrapper' ? targetELement : targetELement.parentNode;
+    const { id } = targetELement;
+    const statusWrapper = document.querySelectorAll('.status-wrapper');
+    Array.from(statusWrapper).forEach((wrapper) => {
+      const elem = wrapper;
+      elem.style.backgroundColor = 'white';
+    });
+    if (id === 'available') {
+      dispatch(setStatusToAvailable);
+      targetELement.style.backgroundColor = '#a7742a';
+    } else if (id === 'pending') {
+      dispatch(setStatusToPending);
+      targetELement.style.backgroundColor = '#a7742a';
+    } else if (id === 'sold') {
+      dispatch(setStatusToSold);
+      targetELement.style.backgroundColor = '#a7742a';
+    }
+  };
   const search = (e) => {
     const text = e.target.value;
     if (text === '') {
@@ -47,7 +68,7 @@ const Header = () => {
         {status.map((st) => {
           const order = status.indexOf(st);
           return (
-            <div className="status-wrapper" key={order}>
+            <div className="status-wrapper" key={order} id={st} onClick={changeStatus} aria-hidden="true" style={{ backgroundColor: order === 0 ? '#a7742a' : 'white' }}>
               <img src={statusIcons[order]} alt="status-icon" className="status-icon" />
               <p className="status-title">
                 {st}

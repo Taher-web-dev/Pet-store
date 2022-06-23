@@ -1,17 +1,25 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Header from './components/Header/header';
-import ListContainer from './components/petList/listContainer';
-import avPetsThunk from './Redux/AvailablePet/thunk';
+import {
+  BrowserRouter as Router, Route, Routes,
+} from 'react-router-dom';
+import avPetsThunk from './Redux/Pets/thunk';
+import HomePage from './components/Homepage/homepage';
+import Pet from './components/PetObject/pet';
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(avPetsThunk()), []);
+  useEffect(() => dispatch(avPetsThunk('available')), []);
+  useEffect(() => dispatch(avPetsThunk('pending')), []);
+  useEffect(() => dispatch(avPetsThunk('sold')), []);
   return (
-    <div className="App">
-      <Header />
-      <ListContainer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/new" element={<Pet />} />
+        <Route path="/update" element={<Pet />} />
+      </Routes>
+    </Router>
   );
 }
 
