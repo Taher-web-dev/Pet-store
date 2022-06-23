@@ -16,7 +16,7 @@ Desktop-Add-Item
 
 
 ## Front-end Live Demo
-> Click [here](https://todo-handson.netlify.app/) to see the live preview of the project.
+> Click [here](https://taher-pet-store.netlify.app/) to see the live preview of the project.
 
 > [link to Backend](https://petstore.swagger.io/)
 
@@ -38,7 +38,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/Taher-web-dev/ToDo-HandsOn-Front-end
+   git clone https://github.com/Taher-web-dev/Pet-store
    ```
 2. Install NPM packages
    ```sh
